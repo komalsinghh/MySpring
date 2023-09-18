@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-		dir('C:/ProgramData/Jenkins/.jenkins/workspace/SpringDevOpsAssignment2/DevOpsAssignment/pom.xml'){
+		dir('DevOpsAssignment'){
                 bat 'mvn clean package'
 		}
             }
