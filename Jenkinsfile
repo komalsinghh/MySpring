@@ -3,9 +3,16 @@ pipeline {
     stages {
         stage('build') {
             steps {
-		dir('DevOpsAssignment'){
-                bat 'mvn clean package'
-		}
+                dir('DevOpsAssignment') {
+                    bat 'mvn clean package'
+                }
+            }
+        }
+        stage('test') {
+            steps {
+                dir('DevOpsAssignment') {
+                    bat 'mvn test'
+                }
             }
         }
     }
